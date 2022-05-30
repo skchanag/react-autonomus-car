@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 3vw 5vw;
+  background-color: #ffffff;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  height: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100px;
+  background: rgb(64, 200, 244);
+  margin: auto;
+}
+
+h1 {
+  color: #333333;
+  text-align: center;
+}
+
+.container {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1120px;
+  position: relative;
+}

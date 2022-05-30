@@ -1,0 +1,55 @@
+.result {
+  margin-bottom: 20px;
+  max-width: 1120px;
+}
+.resultGraphic {
+  margin-bottom: 20px;
+}
+.resultText {
+  height: 100px;
+  background-color: #FEFEFE;
+  color: #333333;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.resultText .title {
+  font-weight: bold;
+  margin: 0px;
+}
+.errorMsg {
+  color: red;
+}
+
+.trackTable {
+  width: 100%;
+  color: rgb(2, 123, 182);
+}
+.trackTable th {
+  width: 20%;
+}
+.trackTable td {
+  height: 360px;
+  border-left: 3px dashed rgb(89, 89, 89);
+  text-align: center;
+}
+.trackTable td:nth-child(2), .trackTable td:nth-child(5) {
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+.trackTable td:first-child, .trackTable th:first-child {
+  border-left: none;
+}
+.trackTable img {
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 480px) {
+  .trackTable td {
+    height: 240px;
+  }
+}

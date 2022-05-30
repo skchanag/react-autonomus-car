@@ -1,0 +1,19 @@
+.btn {
+  font: inherit;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(57, 175, 214);
+  color: white;
+  border: 1px solid rgb(57, 175, 214);
+  margin: 0.5rem;
+}
+.btn:hover {
+  background-color: rgb(64, 200, 244);
+  border-color: rgb(64, 200, 244);
+}
+.btn:disabled {
+  background-color: rgb(89, 89, 89);
+  border-color: rgb(89, 89, 89);
+  cursor: not-allowed;
+}

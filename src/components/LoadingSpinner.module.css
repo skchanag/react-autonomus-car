@@ -1,0 +1,30 @@
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; 
+  border-top: 10px solid rgb(57, 175, 214);;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinnerContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 390px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .spinnerContainer {
+    height: 270px;
+  }
+}
