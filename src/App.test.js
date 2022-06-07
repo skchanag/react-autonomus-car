@@ -39,7 +39,7 @@ describe('App component', () => {
     fireEvent.click(button);
     await waitFor(() => {
       const resultText = screen.getByTestId('resultText');
-      expect(resultText).toHaveTextContent('{ "status": "success", "position": 0 }');
+      expect(resultText).toHaveTextContent('{ "status": "success" }');
     });
   });
 })

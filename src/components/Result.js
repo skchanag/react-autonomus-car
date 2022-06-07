@@ -28,32 +28,36 @@ function Result() {
     </td>
   ));
 
+  const renderTable = () => (
+    <table className={classes.trackTable} data-testid="table">
+      <thead>
+        <tr>
+          <th aria-label="leftmost lane" />
+          <th>a</th>
+          <th>b</th>
+          <th>c</th>
+          <th aria-label="rightmost lane" />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {renderTableData()}
+        </tr>
+      </tbody>
+    </table>
+  );
+
   return (
     <div className={classes.result} data-testid="result">
       <div className={classes.resultGraphic} data-testid="resultGraphic">
-        {resultCtx.isLoading ? <LoadingSpinner /> : (
-          <table className={classes.trackTable} data-testid="table">
-            <thead>
-              <tr>
-                <th aria-label="leftmost lane" />
-                <th>a</th>
-                <th>b</th>
-                <th>c</th>
-                <th aria-label="rightmost lane" />
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {renderTableData()}
-              </tr>
-            </tbody>
-          </table>
-        )}
+        { resultCtx.isLoading && <LoadingSpinner /> }
+        { !resultCtx.isLoading && renderTable() }
       </div>
       <div className={classes.resultText} data-testid="resultText">
         <span className={classes.title}>Result</span>
         { resultCtx.errorMessage !== '' && <p className={classes.errorMsg}>{resultCtx.errorMessage}</p>}
-        { resultCtx.status !== '' && <p>{`{ "status": "${resultCtx.status}", "position": ${resultCtx.position} }`}</p> }
+        { resultCtx.status === 'success' && <p>{`{ "status": "${resultCtx.status}" }`}</p> }
+        { resultCtx.status === 'failure' && <p>{`{ "status": "${resultCtx.status}", "position": ${resultCtx.position} }`}</p> }
       </div>
     </div>
   );

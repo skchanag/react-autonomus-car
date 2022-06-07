@@ -1,5 +1,12 @@
-import { render, getAllByRole, cleanup, fireEvent, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'
+import React from 'react';
+import {
+  render,
+  getAllByRole,
+  cleanup,
+  fireEvent,
+  screen,
+} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Dropdown from './Dropdown';
 
 const dropdownDetails = [
@@ -31,4 +38,4 @@ describe('Dropdown component', () => {
     fireEvent.click(dropdownOptions[4]);
     expect(screen.getByText(dropdownDetails[4].text)).toBeInTheDocument();
   });
-})
+});

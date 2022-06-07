@@ -104,11 +104,12 @@ function Panel() {
           resultCtx.setPosition(result.position);
           resultCtx.setLane(result.lane);
           resultCtx.setErrorMessage('');
-          resultCtx.setIsLoading(false);
         }
       })
       .catch(() => {
         resultCtx.setErrorMessage('Oops! Something went wrong. Please try again.');
+      })
+      .finally(() => {
         resultCtx.setIsLoading(false);
       });
   };
